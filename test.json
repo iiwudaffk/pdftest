@@ -1,0 +1,86 @@
+{
+  "fonts" : [ 
+    {
+      "face" : "THSarabun",
+      "type" : "normal",
+      "url" : "fonts/THSarabun.ttf"
+    },
+    {
+      "face" : "THSarabun",
+      "type" : "bold",
+      "url" : "fonts/THSarabun Bold.ttf"
+    }
+  ],
+  "styles" : [
+    {
+      "id":"default",
+      "font":{"face":"THSarabun","type":"normal","size":18}
+    },
+    {
+      "id":"body_text",
+      "font":{"face":"THSarabun","type":"normal","size":20}
+    },
+    {
+      "id":"table_header",
+      "font":{"face":"THSarabun","type":"bold","size":18}
+    }
+  ],
+  "pages":[
+    {
+      "contents": [
+        {
+          "type":"table",
+          "padding":{
+            "top":5,"bottom":5
+          },
+          "widths":["100","120","140","100"],
+          "body": [
+            [
+              { 
+                "type":"text",
+                "text":"ส่วนหัว 1",
+                "style":"table_header",
+                "options":{"align":"center"}
+              },
+              {"type":"text","text":"ส่วนหัว 2","style":"table_header"},
+              {"type":"text","text":"ส่วนหัว 3"},
+              {"type":"text","text":"ส่วนหัว 4","style":"table_header"}
+            ],
+            [
+              {"type":"text","text":"ทดสอบภาษาไทย 1"},
+              {"type":"text","text":"ทดสอบภาษาไทย 2"},
+              {"type":"text","text":"ทดสอบภาษาไทย 3"},
+              {"type":"text","text":"ทดสอบภาษาไทย 4"}
+            ],
+            [
+              {"type":"text","text":"ทดสอบภาษาไทยทดสอบภาษาไทยทดสอบภาษาไทย"},
+              {"type":"text","text":"ทดสอบภาษาไทย 2"},
+              {"type":"text","text":"ทดสอบภาษาไทย 3"},
+              {"type":"text","text":"ทดสอบภาษาไทย 2"}
+            ]
+          ]
+        },
+        {
+          "type":"text",
+          "style":"body_text",
+          "position":{"x":10, "y":10},
+          "text":"ทดสอบภาษาไทย 1",
+          "options" : {
+            "align":"right",
+            "width":200
+          }
+        }
+      ]
+    },
+    {
+      "contents": [
+        {
+          "type":"text",
+          "style":"body_text",
+          "text":"ทดสอบภาษาไทย 2"
+        }
+      ]
+    }
+  ] 
+}
+    
