@@ -1,14 +1,8 @@
-var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
-}).listen(1337,'128.199.229.29');
-console.log('Server running at http://128.199.229.29/:1337/');
-
 'use strict';
 
 var os = require('os');
 var ifaces = os.networkInterfaces();
+var ip ;
 
 Object.keys(ifaces).forEach(function (ifname) {
   var alias = 0
@@ -22,10 +16,20 @@ Object.keys(ifaces).forEach(function (ifname) {
 
     if (alias >= 1) {
       // this single interface has multiple ipv4 addresses
+	ip = iface.address;
       console.log(ifname + ':' + alias, iface.address);
     } else {
       // this interface has only one ipv4 adress
+	ip = iface.address;
       console.log(ifname, iface.address);
     }
   });
 });
+
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(1337);
+console.log('Server running at http://'+ip+':1337/');
+
